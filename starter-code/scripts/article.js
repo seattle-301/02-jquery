@@ -26,9 +26,9 @@ Article.prototype.toHtml = function() {
    4. article body, and
    5. publication date as a datetime attribute. */
   $newArticle.attr('data-author', this.author);
-  $newArticle.find('.byline a').html(this.author);
+  $newArticle.find('.byline a').text(this.author);
   $newArticle.find('.byline a').attr('href', this.authorUrl);
-  $newArticle.find('h1:first').html(this.title);
+  $newArticle.find('h1:first').text(this.title);
   $newArticle.find('.article-body').html(this.body);
   $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn);
   /* TODO: This cloned article is no longer a template,
